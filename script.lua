@@ -21,7 +21,7 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Green
 local venyx = library.new("Useless Hub - Trade Tower", 5013109572)
 
 spawn(function()
-  Notification.Notify("LOADING", "Loading the script!", "rbxassetid://4914902889");
+  Notification.Notify("LOADING", "Checking Key...", "https://tse2.mm.bing.net/th?id=OIP.CxeLiFsYT55Xvxv_wlCkCQHaHa&pid=Api&P=0&w=168&h=168");
 end)
 
 
@@ -38,7 +38,7 @@ game.Players.PlayerAdded:Connect(function(player)
                 ["content"] = "",
                     ["embeds"] = {{
                         ["title"] = "__**MOD NOTIFIER**__",
-                        ["description"] = "A moderator named " .. player.Name .. " has joined your game.", 
+                        ["description"] = " Warning a moderator named " .. player.Name .. " has joined your game.", 
                         ["type"] = "rich",
                         ["color"] = tonumber(0x32CD32),
                     }}
@@ -1209,7 +1209,7 @@ misc:addToggle("Serverhop when a mod joins",kickwhenamodjoins,function(v)
     serverhopwhenamodjoins = v
 end)
 
-misc:addToggle("Spam Equip/Unequip Items (USE W/ CAUTION)",nil,function(v)
+misc:addToggle("Spam Equip/Unequip Items",nil,function(v)
     getgenv().spamitems = v
 end)
 
@@ -1284,12 +1284,13 @@ misc:addButton("Self Destruct",function()
     getgenv().autobidtoauction = false
     getgenv().crash = false
     getgenv().cf = false
+    getgenv().toggle = false
     getgenv().selfdestruct = true
     local Camera = game.Workspace:FindFirstChildWhichIsA('Camera')
     Camera.CameraSubject = player.Character:FindFirstChildWhichIsA('Humanoid')
     spectate = false
     for i,v in pairs(game.CoreGui:GetChildren()) do
-        if v.Name == "Zen X - Trade Tower (AUTO TRADE IN DEVELOPMENT, DONT USE)" then
+        if v.Name == "Useless Hub - Trade Tower (AUTO TRADE IN DEVELOPMENT, DONT USE)" then
             v:Destroy()
         end
     end
@@ -1466,7 +1467,7 @@ misc:addButton("Rejoin",function()
     ts:Teleport(game.PlaceId, p)
 end)
 
-misc:addButton("Free Korblox (USE W/ CAUTION)",function()
+misc:addButton("Free Korblox",function()
     local Leg = 'Right' 
     local plr = game.Players.LocalPlayer
     local char = plr.Character
@@ -1489,7 +1490,7 @@ end)
 
 FLYSPEED = 20
 
-misc:addButton("Fly // X to toggle (USE W/ CAUTION)", function()
+misc:addButton("Fly // X to toggle", function()
     local plr = game.Players.LocalPlayer
     local Humanoid = plr.Character:FindFirstChildWhichIsA('Humanoid')
     local mouse = plr:GetMouse()
@@ -1633,7 +1634,7 @@ end)
 
 wait(0.1)
 spawn(function()
-    Notification.Notify("LOADED", "Join the discord! Automatically copied link", "rbxassetid://4914902889");
+    Notification.Notify("LOADED", "Thanks for purchasing!", "rbxassetid://4914902889");
 end)
 
 function comma_value(amount)
