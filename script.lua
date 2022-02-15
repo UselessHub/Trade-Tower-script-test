@@ -1,3 +1,6 @@
+
+--Useless On TOP!!
+
 repeat wait() until game:IsLoaded()
 wait(0.5)
 for _,v in pairs(game.CoreGui:GetChildren()) do
@@ -1164,7 +1167,7 @@ main:addSlider("Max price to autosell",autosellmaxprice,1,50000,function(v)
     sellCurrentItems()
 end)
 
-main:addToggle("Auto collect supply drops",autocollectsupplydrops,function(v)
+main:addToggle("Auto collect supply drops (Broken)",autocollectsupplydrops,function(v)
     getgenv().autopickup = v
     autocollectsupplydrops = v
 end)
